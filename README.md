@@ -108,7 +108,7 @@ GROUP BY m.medico_id, m.nombre, m.apellido
 ORDER BY horas_semana DESC;
 ```
 
-4. **Número de sustituciones realizadas por cada médico sustituto**
+4. **Número de sustituciones realizadas por cada médico sustituto** NO FUNCIONA
 
 Filtra los médicos de tipo Sustituto y cuenta las filas de `sustitucion` donde son el sustituto.
 
@@ -124,7 +124,7 @@ GROUP BY m.medico_id, m.nombre, m.apellido
 ORDER BY total_sustituciones DESC;
 ```
 
-5. **Número de médicos que están actualmente en sustitución**
+5. **Número de médicos que están actualmente en sustitución** NO FUNCIONA
 
 Una sustitución está vigente si ya empezó y no tiene `fecha_fin` o esta aún no llega. Se cuentan los médicos sustitutos distintos.
 
@@ -168,69 +168,4 @@ HAVING COUNT(p.paciente_id) = (
           WHERE medico_asignado_id IS NOT NULL
           GROUP BY medico_asignado_id) AS t
 );
-```
-
-8. **Empleados con más de 10 días de vacaciones disfrutadas**
-
-```sql
-```
-
-9. **Médicos que actualmente están realizando una sustitución**
-
-```sql
-```
-
-10. **Promedio de horas de consulta por médico por día de la semana**
-
-```sql
-```
-
-11. **Empleados con mayor número de pacientes atendidos por los médicos bajo su supervisión**
-
-```sql
-```
-
-12. **Médicos con más de 5 pacientes y total de horas de consulta en la semana**
-
-```sql
-```
-
-13. **Total de días de vacaciones planificadas y disfrutadas por cada tipo de empleado**
-
-```sql
-```
-
-14. **Total de pacientes por cada tipo de médico**
-
-```sql
-```
-
-15. **Total de horas de consulta por médico y día de la semana**
-
-```sql
-```
-
-16. **Número de sustituciones por tipo de médico**
-
-```sql
-```
-
-17. **Total de pacientes por médico y por especialidad**
-
-```sql
-```
-
-18. **Empleados y médicos con más de 20 días de vacaciones planificadas**
-
-```sql
-```
-
-19. **Médicos con el mayor número de pacientes actualmente en sustitución**
-
-```sql
-```
-
-20. **Total de horas de consulta por especialidad y día de la semana**
-
-```sql
 ```
